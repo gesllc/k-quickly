@@ -1,0 +1,8 @@
+verson: '1'
+services:
+    web:
+        build: .
+        command: python3 server.py
+        ports:
+          - "8080:80"
+
