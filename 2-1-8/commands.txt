@@ -1,0 +1,2 @@
+podman build . -t compiled_code
+podman run compiled_code
