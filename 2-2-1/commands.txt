@@ -1,0 +1,5 @@
+podman build . -t server_app
+podman run -it -p 8080:80 server_app
+
+clear; podman build . -t server_app; podman run -it -p 8080:80 server_app
+
