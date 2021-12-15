@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pluscode-demo
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: pluscode     # The App labels must match
+  template:
+    # Beginning of Pod template
+    metadata:
+      labels:
+        app: pluscode   # This App label must match the one above
+    spec:
+      containers:
+      - name: pluscode-container
+        image: docker.io/gesllc/server_app:2.2.1
+

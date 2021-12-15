@@ -1,0 +1,16 @@
+# Section 3.2.4, page 60
+# kubectl get service --watch
+apiVersion: v1
+kind: Service
+metadata:
+  name: pluscode-service
+spec:
+  selector:
+    app: pluscode      # This should match the name of the deployed pods
+  type: LoadBalancer   # Note the author's example used the commented line below, but failed.
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+#      type: LoadBalancer  # kubectl failed, also text indentation was incorrect (apparently)
+
